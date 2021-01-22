@@ -26,7 +26,7 @@ function handleCcc() {
 <h1>Hello {name}!</h1>
 <img src={src} alt="A man dances" />
 <p class="custom-1">This is a paragraph.</p>
-<Nested />
+<Nested answer={42} />
 <p>{@html string}</p>
 <button on:click={handleClick}>
   Clicked {count} {count === 1 ? 'time' : 'times'}
