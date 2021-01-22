@@ -5,6 +5,7 @@ let name = 'world';
 let src = 'favicon.png';
 let string = `This string contains some <strong>HTML!!!</strong>`;
 let count = 0;
+$: doubled = count * 2;
 
 function handleClick() {
   count += 1;
@@ -19,6 +20,7 @@ function handleClick() {
 <button on:click={handleClick}>
   Clicked {count} {count === 1 ? 'time' : 'times'}
 </button>
+<p>{count} doubled is {doubled}</p>
 
 <style>
 p.custom-1 {
