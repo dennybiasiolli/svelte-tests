@@ -4,6 +4,11 @@ import Nested from './components/Nested.svelte';
 let name = 'world';
 let src = 'favicon.png';
 let string = `This string contains some <strong>HTML!!!</strong>`;
+let count = 0;
+
+function handleClick() {
+  count += 1;
+}
 </script>
 
 <h1>Hello {name}!</h1>
@@ -11,6 +16,9 @@ let string = `This string contains some <strong>HTML!!!</strong>`;
 <p class="custom-1">This is a paragraph.</p>
 <Nested />
 <p>{@html string}</p>
+<button on:click={handleClick}>
+  Clicked {count} {count === 1 ? 'time' : 'times'}
+</button>
 
 <style>
 p.custom-1 {
